@@ -1,0 +1,20 @@
+---
+export interface Props {
+    title: string;
+    demoLink:string;
+    body: string;
+    stack: string
+    ghLink:string;
+}
+
+const {title, demoLink, body, stack, ghLink} = Astro.props
+---
+<div class="mb-5">
+<a href={demoLink}>
+<h3 class="text-purple-700 bg- font-semibold hover:underline">{title}</h3>
+</a>
+<div>{body}</div>
+<div>Made with {stack}</div>
+<a href={ghLink} class="text-purple-500 hover:underline">code on GitHub</a>
+</div>
+
